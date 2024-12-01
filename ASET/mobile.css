@@ -1,0 +1,339 @@
+/* Gaya Dasar */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle, rgba(224, 107, 213, 0.852) 0%, rgba(75, 57, 198, 0.905) 100%);
+  color: white;
+  text-align: center;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu-icon,
+.profile-icon {
+  font-size: 1.5em;
+}
+
+.welcome-text {
+  font-size: 0.9em;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-top: 50px;
+  text-transform: uppercase;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  justify-content: center;
+  position: relative; /* Pastikan ini ada */
+  width: 100%;
+  height: auto;
+  
+}
+.container {
+  background: radial-gradient(circle, rgba(224, 107, 213, 0.852) 0%, rgba(75, 57, 198, 0.905) 100%),
+  url("image/bagroin.png");
+background-repeat: no-repeat;
+background-size: contain;
+background-position: top;
+z-index: 10;
+}
+.home::after {
+  content: "";  /* Memastikan pseudo-element ditampilkan */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;  /* Beri tinggi sementara untuk melihat efek */
+  background: linear-gradient(to top, rgba(30, 30, 30, 1) 20%, rgba(30, 30, 30, 0));
+  z-index: -1; /* Pastikan berada di belakang konten */
+}
+
+
+/* Counter Mahasiswa */
+.mahasiswa {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 25pt;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.number {
+  font-size: 42px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, #96dcff, #14a6ef 55%);
+  filter: brightness(1.2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: #a4dcf893 2px 0 20px;
+}
+
+/* Grid Tombol */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Tombol Individual */
+.button-container {
+  width: 150px;
+  position: relative;
+  border: 2px solid white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.14);
+  transition: transform 0.3s, background 0.3s;
+  overflow: hidden;
+}
+
+.old-website-container,
+.instagram-container,
+.text-anonim-container {
+  height: 100px;
+}
+
+.instagram-container {
+  height: 250px;
+}
+
+.kanan {
+  height: 250px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.button-container:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Logo dan Teks */
+.logo-top-left,
+.logo-top-right {
+  position: absolute;
+  top: 5px;
+}
+
+.logo-top-left {
+  left: 10px;
+  font-size: 1.2em;
+}
+
+.logo-top-right {
+  top: 10px;
+  right: 10px;
+  font-size: 1em;
+}
+
+.text-bottom-left {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  font-size: 0.8em;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Tombol Utama */
+.button {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  line-height: 80px;
+  font-weight: bold;
+  text-align: start;
+  transition: background 0.3s;
+}
+
+.button-container .button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  text-align: left;
+  font-size: 0.9em;
+  line-height: normal;
+}
+
+/* Navigasi */
+.navigation {
+  display: none;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.navigation a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Section Styles */
+section {
+  height: auto;
+  margin: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#about,
+#gallery {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+#AngkaGradientBlue {
+  -webkit-text-stroke: 1px #14a6ef3f;
+  background: linear-gradient(to bottom right, #96dcff, #14a6ef 55%);
+  filter: brightness(1.2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: #a4dcf893 2px 0 20px;
+}
+
+#AngkaGradientPink {
+  -webkit-text-stroke: 1px #d41a773d;
+  background: linear-gradient(to top right, #fab6e7, #d41a77 80%);
+  filter: brightness(1.2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: #d41a77 2px 0 20px;
+}
+
+/* Menu Icon */
+.menu-icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+}
+
+/* Class Gallery Text */
+.galeritext {
+  font-size: 20px;
+  text-align: start;
+  margin-top: 20px;
+  font-weight: 500;
+}
+/* Gallery Section */
+.gallery-section {
+  padding: 40px 20px;
+
+
+  color: white;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Swiper Container */
+.swiper-container {
+  width: 100%; /* Pastikan slider mengambil 100% dari lebar layar */
+  max-width: 600px; /* Tidak melebihi lebar layar */
+  margin: 0 auto; /* Centered */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  max-height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Buttons */
+.gallery-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.14);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5),
+		0 0 15px rgba(255, 255, 255, 0.5);
+  color: white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+	-webkit-backdrop-filter: blur(6.9px);
+	border: 1px solid rgba(255, 255, 255, 0.09);
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 15pt;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #555;
+}
+
+/* Swiper Custom Styles */
+.swiper-pagination-bullet {
+  background: white;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+}
+
+#gallery {
+  width: 100%;
+}
